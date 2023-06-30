@@ -2,8 +2,8 @@ from bs4 import BeautifulSoup
 import requests
 import smtplib
 
-my_email = "osofresh10@gmail.com"
-password = "ayxynmlpckbsiarx"
+my_email = YOUR EMAIL
+password = YOUR PASSWORD
 
 link = input("post the link here:")
 price_target = float(input("what is your price target?:"))
@@ -29,7 +29,7 @@ if price < price_target:
         connect.login(user=my_email, password=password)
         connect.sendmail(
             from_addr=my_email,
-            to_addrs="adamosovsky@gmail.com", msg=f"Subject:Price Alert!\n\n{title}\n{price}!"
+            to_addrs= RECEIVER EMAIL, msg=f"Subject:Price Alert!\n\n{title}\n{price}!"
         )
 else:
     print("Too expensive!")
